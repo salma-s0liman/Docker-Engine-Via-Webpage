@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Our Team</title>
+        <link rel="stylesheet" href="Teamstyle.css">        
+    </head>
+    <body>
+        <section class="team">
+            <div class="center">
+                <h1>Meet Our Team</h1>
+            </div>     
+        <!--############student1################-->
+        <div class="container">
+            <div class="box">
+                <div class="imgBx"><img src="Abdelhamed.jpg">
+                    <div class="glass">                              
+                    <h3>
+                        <ul>
+                            <li>Name: Abdelhamed Hassan</li>
+                            <li>ID: 22010125</li>
+                            <li>Age: 20 </li>
+                            <li>CGPA: 3.8653 </li>
+                        </ul>
+                    </h3>
+                    <ul id="icons">
+                        <a href="mailto:abdelhamedhsn.2003@gmail.com" style="--i:1"><ion-icon name="mail-outline"></ion-icon></ion-icon></a>
+                        <a href="https://github.com/abdelhamed72" style="--i:2"><ion-icon name="logo-github"></ion-icon></a>
+                        <a href="https://www.linkedin.com/in/abd-el-hamed-hassan-29a550265/" style="--i:3"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </ul>
+                </div>
+                </div>
+            </div>       
+        <!--############student2################-->
+        <div class="box" data-color="clr2">
+            <div class="imgBx"><img src="Salma.jpg">
+            <div class="glass">
+                <h3>
+                    <ul>
+                        <li>Name: Salma Soliman</li>
+                        <li>ID: 22010111</li>
+                        <li>Age: 20 </li>
+                        <li>CGPA: 3.3779</li>
+                    </ul>
+                </h3>
+                <ul id="icons">
+                    <a href="mailto:soly17282@gmail.com" style="--i:1"><ion-icon name="mail-outline"></ion-icon></ion-icon></a>
+                    <a href="https://github.com/salma-s0liman" style="--i:2"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="#" style="--i:3"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <!--############student3################-->
+        <div class="box" data-color="clr3">
+            <div class="imgBx"><img src="Marina.jpg">
+            <div class="glass">
+                <h3>
+                    <ul>
+                        <li>Name: Marina Maged</li>
+                        <li>ID: 22010482</li>
+                        <li>Age: 20 </li>
+                        <li>CGPA: 3.9387</li>
+                    </ul>
+                </h3>
+                <ul id="icons">
+                    <a href="mailto:marina.maged200@gmail.com" style="--i:1"><ion-icon name="mail-outline"></ion-icon></ion-icon></a>
+                    <a href="https://github.com/MarinaaMaged" style="--i:2"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="https://www.linkedin.com/in/marina-maged-438445247" style="--i:3"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <!--############student4################-->
+        <div class="box" data-color="clr4">
+            <div class="imgBx"><img src="Mariam.jpg">
+            <div class="glass">
+                <h3>
+                    <ul>
+                        <li>Name: Mariam ElHabashi</li>
+                        <li>ID: 22010394</li>
+                        <li>Age: 20 </li>
+                        <li>CGPA: 3.8268</li>
+                    </ul>
+                </h3>
+                <ul id="icons">
+                    <a href="mailto:mariamhabshi177@gmail.com" style="--i:1"><ion-icon name="mail-outline"></ion-icon></ion-icon></a>
+                    <a href="https://github.com/MariamHabshi17" style="--i:2"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="https://www.linkedin.com/in/mariam-habshi-8416a3198" style="--i:3"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <!--############student5################-->
+        <div class="box" data-color="clr5">
+            <div class="imgBx"><img src="Moataz.jpg">
+            <div class="glass">
+                <h3>
+                    <ul>
+                        <li>Name: Moataz ElShimy</li>
+                        <li>ID: 22011453</li>
+                        <li>Age: 20 </li>
+                        <li>CGPA: 3.7333</li>
+                    </ul>
+                </h3>
+                <ul id="icons">
+                    <a href="mailto:zizoelshimy8@gmail.com" style="--i:1"><ion-icon name="mail-outline"></ion-icon></ion-icon></a>
+                    <a href="https://github.com/zizoelshimy" style="--i:2"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="linkedin.com/in/moataz-el-shimy-07b381281" style="--i:3"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="button-wrapper">
+        <button class="scrollButton" onclick="scrollToTable()">See More</button>
+    </div>
+</section>
+        <!-- Table Form -->
+        <div id="tableForm" style="display: none;">
+            <table id="teamTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Age</th>
+                        <th>CGPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be populated dynamically using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!--#########################################################################################################-->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('.scrollButton').addEventListener('click', function() {
+                    scrollToTable();
+                    fetchData(); // Make AJAX request to fetch data from backend
+                });
+            });
+
+        function scrollToTable() {
+            // Scroll to the table form
+            document.getElementById('tableForm').scrollIntoView({ behavior: 'smooth' });
+            // Show the table form
+            document.getElementById('tableForm').style.display = 'block';
+            // Fetch data from the backend
+            fetchData();
+        }
+            //###########################backend######################
+    <!-- Using Flask: JavaScript code to fetch data from Flask backend -->
+    // Function to fetch data from Flask backend
+    function fetchData() {
+        // Make an HTTP GET request to the /data endpoint in Flask
+        fetch('/data')
+            // Once the response is received, parse it as JSON
+            .then(response => response.json())
+            // Once the JSON data is parsed, call the populateTable function
+            .then(data => {
+                populateTable(data); // Call populateTable with the fetched data
+            })
+            // If there is an error during the fetch process, log the error
+            .catch(error => console.error('Error fetching data:', error));
+    }
+
+    // Function to populate the HTML table with fetched data
+    function populateTable(data) {
+        // Select the table body where the data will be inserted
+        const tableBody = document.querySelector('#teamTable tbody');
+        // Clear any existing content in the table body
+        tableBody.innerHTML = '';
+
+        // Loop through each item in the fetched data array
+        data.forEach(item => {
+            // Create a new table row for each item
+            const row = document.createElement('tr');
+            // Populate the table row with data from the current item
+            row.innerHTML = `
+                <td>${item.name}</td>
+                <td>${item.id}</td>
+                <td>${item.age}</td>
+                <td>${item.cgpa}</td>
+            `;
+            // Append the populated row to the table body
+            tableBody.appendChild(row);
+        });
+    }
+        </script>
+    </body>
+</html>
