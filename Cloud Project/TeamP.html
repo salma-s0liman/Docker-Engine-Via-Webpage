@@ -116,7 +116,12 @@
         <button class="scrollButton" onclick="scrollToTable()">See More</button>
     </div>
 
-        <!-- Table Form -->
+    <div id="listForm">
+        <ul id="myList">
+            <!-- List items will be populated dynamically using JavaScript -->
+        </ul>
+    </div>
+ <!--########################Table####################3-->
         <div id="tableForm" style="display: none;">
             <table id="teamTable">
                 <thead>
@@ -129,67 +134,31 @@
                 </thead>
                 <tbody>
                     <!-- Table rows will be populated dynamically using JavaScript -->
+                    {% for item in data %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.age }}</td>
+                        <td>{{ item.cgpa }}</td>
+                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
     </section>
         <!--#########################################################################################################-->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector('.scrollButton').addEventListener('click', function() {
-                    scrollToTable();
-                    fetchData(); // Make AJAX request to fetch data from backend
-                });
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.scrollButton').addEventListener('click', function() {
+                scrollToTable();
             });
-
-        function scrollToTable() {
-            // Scroll to the table form
-            document.getElementById('tableForm').scrollIntoView({ behavior: 'smooth' });
-            // Show the table form
-            document.getElementById('tableForm').style.display = 'block';
-            // Fetch data from the backend
-            fetchData();
-        }
-            //###########################backend######################
-    <!-- Using Flask: JavaScript code to fetch data from Flask backend -->
-    // Function to fetch data from Flask backend
-    function fetchData() {
-        // Make an HTTP GET request to the /data endpoint in Flask
-        fetch('/data')
-            // Once the response is received, parse it as JSON
-            .then(response => response.json())
-            // Once the JSON data is parsed, call the populateTable function
-            .then(data => {
-                populateTable(data); // Call populateTable with the fetched data
-            })
-            // If there is an error during the fetch process, log the error
-            .catch(error => console.error('Error fetching data:', error));
-    }
-
-    // Function to populate the HTML table with fetched data
-    function populateTable(data) {
-        // Select the table body where the data will be inserted
-        const tableBody = document.querySelector('#teamTable tbody');
-        // Clear any existing content in the table body
-        tableBody.innerHTML = '';
-
-        // Loop through each item in the fetched data array
-        data.forEach(item => {
-            // Create a new table row for each item
-            const row = document.createElement('tr');
-            // Populate the table row with data from the current item
-            row.innerHTML = `
-                <td>${item.name}</td>
-                <td>${item.id}</td>
-                <td>${item.age}</td>
-                <td>${item.cgpa}</td>
-            `;
-            // Append the populated row to the table body
-            tableBody.appendChild(row);
         });
-    }
-        </script>
+    
+        function scrollToTable() {
+            document.getElementById('tableForm').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
     </body>
 </html>
