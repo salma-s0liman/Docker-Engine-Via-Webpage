@@ -139,10 +139,13 @@ border: 4px solid rgb(0,0,0,0.2);
     color: #ffffff;
 }
 .button-wrapper {
-    text-align: left;
+    text-align: center;
     padding-top: 50px;
-    padding-left: 80px;
 }
 #tableForm {
     display: none;
+}
+#tableForm {
+    margin-top: 20px; /* Adjust as needed */
+    padding-left : 580px;
 }
